@@ -1,0 +1,82 @@
+.container{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    height: 30px;
+    position: sticky;
+    top: 0;
+    background-color: teal;
+    justify-content: space-between;
+    gap: 20px;
+    color: white
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    flex: 3;
+}
+
+.searchbar{
+    flex: 5;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar svg{
+    color: black;
+    font-size: 20px;
+}
+
+.searchbar input, .searchbar input:focus{
+    width: 90%;
+    border: none;
+    outline: none;
+}
+
+.link{
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+}
+
+.icon{
+    display: flex;
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.badge{
+    width: 15px;
+    height: 15px;
+    background-color:brown;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    text-align: center;
+    line-height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.user_image{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
