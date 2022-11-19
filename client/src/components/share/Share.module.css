@@ -1,0 +1,60 @@
+.container{
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    --webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68)
+}
+
+.wrapper{
+    padding: 10px;
+}
+
+.top, .options, .option, .bottom{
+    display: flex;
+    align-items: center;
+}
+
+.top input{
+    width: 80%;
+}
+
+.top .avatar{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.separator{
+    margin: 20px;
+}
+
+.bottom{
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.option{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.option svg{
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.option span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bottom button{
+    border: none;
+    padding: 4px 8px;
+    background-color: teal;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-end;
+}
