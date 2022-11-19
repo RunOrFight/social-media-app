@@ -1,0 +1,65 @@
+.container{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    --webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    padding: 10px;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar{
+    margin-right: 10px;
+}
+
+.user_name{
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.publish_date{
+    flex: 1;
+    font-size: 12px;
+}
+
+.center{
+    margin-bottom: 20px;
+}
+
+.post_text{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.post_img{
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+}
+
+.bottom svg{
+    margin-right: 5px;
+}
+
+.like_counter{
+    flex: 1;
+    font-size: 15px;
+}
+
+.comment_counter{
+    cursor: pointer;
+    border-bottom: 1px dashed teal;
+}

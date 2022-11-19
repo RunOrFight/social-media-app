@@ -8,6 +8,11 @@ const Feed = () => {
       <div className={cls.wrapper}>
         <Share />
         <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
       </div>
     </div>
   );
