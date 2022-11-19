@@ -1,5 +1,41 @@
 .container{
     flex: 3;
-    border: 2px solid blue;
     height: calc(100vh - 50px); 
+    overflow-y: scroll;
+}
+
+.wrapper{
+    padding: 20px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item svg{
+    margin-right: 15px;
+}
+
+.button{
+   width: 150px;
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+   font-weight:500; 
+}
+
+.separator{
+    margin: 20px 0;
+}
+
+.friend{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar{
+    margin-right: 10px;
 }

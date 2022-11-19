@@ -40,7 +40,7 @@ const Topbar = () => {
           </div>
         </div>
         <img
-          className={cls.user_image}
+          className='avatar'
           src='/assets/users/sasha.jpeg'
           alt='Profile'
         />

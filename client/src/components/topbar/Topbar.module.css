@@ -49,10 +49,8 @@
     font-size: 20px;
 }
 
-.searchbar input, .searchbar input:focus{
+.searchbar input{
     width: 90%;
-    border: none;
-    outline: none;
 }
 
 
@@ -87,12 +85,4 @@
     line-height: 15px;
     text-align: center;
     font-size: 12px;
-}
-
-.user_image{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
 }
