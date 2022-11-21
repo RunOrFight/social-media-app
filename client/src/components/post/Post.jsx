@@ -1,7 +1,7 @@
 import cls from "./Post.module.css";
 import { MoreVertSharp, FavoriteBorderSharp } from "@mui/icons-material";
 
-const Post = () => {
+const Post = ({ post }) => {
   return (
     <div className={cls.container}>
       <div className={cls.wrapper}>
@@ -16,10 +16,10 @@ const Post = () => {
           <MoreVertSharp />
         </div>
         <div className={cls.center}>
-          <span className={cls.post_text}>Hello! It's my first post</span>
+          <span className={cls.post_text}>{post.description}</span>
           <img
             className={cls.post_img}
-            src='/assets/posts/bison.jpeg'
+            src={post.image}
             alt='bison'
           />
         </div>
