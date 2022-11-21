@@ -1,4 +1,29 @@
 .container{
     flex: 3.5;
-    border: 2px solid green
+}
+
+.birthday{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.birthday svg{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.birthday span{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.ad{
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.title{
+    margin-bottom: 20px;
 }

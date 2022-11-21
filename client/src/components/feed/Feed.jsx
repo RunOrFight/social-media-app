@@ -5,15 +5,13 @@ import Post from "../post/Post";
 const Feed = () => {
   return (
     <div className={cls.container}>
-      <div className={cls.wrapper}>
-        <Share />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-      </div>
+      <Share />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 };

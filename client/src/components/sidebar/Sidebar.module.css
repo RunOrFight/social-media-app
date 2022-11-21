@@ -4,10 +4,6 @@
     overflow-y: scroll;
 }
 
-.wrapper{
-    padding: 20px;
-}
-
 .item{
     display: flex;
     align-items: center;
@@ -30,12 +26,3 @@
     margin: 20px 0;
 }
 
-.friend{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.avatar{
-    margin-right: 10px;
-}
