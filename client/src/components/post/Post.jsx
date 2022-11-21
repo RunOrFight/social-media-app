@@ -1,22 +1,39 @@
 import cls from "./Post.module.css";
-import { MoreVertSharp, FavoriteBorderSharp } from "@mui/icons-material";
+import {
+  MoreVertSharp,
+  FavoriteBorderSharp,
+  FavoriteSharp
+} from "@mui/icons-material";
+import users from "../../data/users.json";
+import User from "../user/User";
+import { useMemo, useState } from "react";
 
 const Post = ({ post }) => {
+  const [like, setLike] = useState(post.likes.length);
+
+  const [isLiked, setIsLiked] = useState(false);
+
+  const user = useMemo(() => {
+    return users.find((user) => user.id === post.userId);
+  }, [post.userId]);
+
+  const likeHandler = () => {
+    setLike(isLiked ? like - 1 : like + 1);
+    setIsLiked(!isLiked);
+  };
   return (
     <div className={cls.container}>
       <div className={cls.wrapper}>
         <div className={cls.top}>
-          <img
-            src='/assets/users/sasha.jpeg'
-            className={`${cls.avatar} avatar`}
-            alt='person'
+          <User
+            user={user}
+            style={{ marginRight: "15px" }}
           />
-          <span className={cls.user_name}>Alexander Mikhnyuk</span>
-          <span className={cls.publish_date}>5 mins ago</span>
+          <span className={cls.publish_date}>{post.date}</span>
           <MoreVertSharp />
         </div>
         <div className={cls.center}>
-          <span className={cls.post_text}>{post.description}</span>
+          <div className={cls.post_text}>{post.description}</div>
           <img
             className={cls.post_img}
             src={post.image}
@@ -24,9 +41,21 @@ const Post = ({ post }) => {
           />
         </div>
         <div className={cls.bottom}>
-          <FavoriteBorderSharp />
-          <span className={cls.like_counter}>32 people like it</span>
-          <span className={cls.comment_counter}>9 comments</span>
+          {isLiked ? (
+            <FavoriteSharp
+              onClick={likeHandler}
+              style={{ cursor: "pointer" }}
+            />
+          ) : (
+            <FavoriteBorderSharp
+              onClick={likeHandler}
+              style={{ cursor: "pointer" }}
+            />
+          )}
+          <span className={cls.like_counter}>{like} people like it</span>
+          <span className={cls.comment_counter}>
+            {post.comments.length} comments
+          </span>
         </div>
       </div>
     </div>

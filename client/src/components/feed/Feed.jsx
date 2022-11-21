@@ -8,7 +8,12 @@ const Feed = () => {
     <div className={cls.container}>
       <Share />
       {posts.map((post) => {
-        return <Post post={post} />;
+        return (
+          <Post
+            post={post}
+            key={post.id}
+          />
+        );
       })}
     </div>
   );

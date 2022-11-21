@@ -1,77 +1,25 @@
 import cls from "./FriendList.module.css";
+import users from "../../data/users.json";
+import { useMemo } from "react";
+import User from "../user/User";
 
-const FriendList = () => {
+const FriendList = ({ filter }) => {
+  const _users = useMemo(() => {
+    return users.filter((user) => (filter ? user[filter] === true : true));
+  }, [filter]);
+
   return (
     <div className={cls.container}>
       <ul className={cls.list}>
-        <li className={cls.friend}>
-          <div className={cls.avatar}>
-            <img
-              className='avatar'
-              src='/assets/users/nika.jpeg'
-              alt='Friend'
+        {_users.map((user) => {
+          return (
+            <User
+              user={user}
+              style={{ marginBottom: "15px" }}
+              key={user.id}
             />
-            <span className={cls.online}></span>
-          </div>
-
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
-        <li className={cls.friend}>
-          <img
-            className={`${cls.avatar} avatar`}
-            src='/assets/users/nika.jpeg'
-            alt='Friend'
-          />
-          <span className={cls.name}>Nika Bohdzel</span>
-        </li>
+          );
+        })}
       </ul>
     </div>
   );

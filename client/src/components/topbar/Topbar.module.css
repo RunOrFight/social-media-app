@@ -6,7 +6,8 @@
     position: sticky;
     top: 0;
     background-color: teal;
-    color: white
+    color: white;
+    z-index: 999
 }
 
 .left{

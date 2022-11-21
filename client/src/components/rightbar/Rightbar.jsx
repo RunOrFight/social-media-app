@@ -17,7 +17,7 @@ const Rightbar = () => {
         className={cls.ad}
       />
       <h4 className={cls.title}>Online Friends</h4>
-      <FriendList />
+      <FriendList filter='online' />
     </div>
   );
 };

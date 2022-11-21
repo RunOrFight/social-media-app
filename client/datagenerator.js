@@ -9,20 +9,22 @@ function random_elements(arr, num) {
 }
 
 casual.define("user", function (userId) {
+  const username = casual.full_name;
   return {
     id: userId,
-    username: casual.full_name,
+    username,
     email: casual.email,
     password: casual.password,
-    profilePicture: "https://joeschmoe.io/api/v1/" + userId,
-    coverPicture: "https://picsum.photos/650/400",
+    profilePicture: "https://api.lorem.space/image/face?dummyId=" + userId,
+    coverPicture: "https://api.lorem.space/image?dummyId=" + userId,
     followers: [],
     followings: [],
     isAdmin: false,
     description: casual.description,
     city: casual.city,
     from: casual.city,
-    relationship: casual.random_element([1, 2, 3])
+    relationship: casual.random_element([1, 2, 3]),
+    online: casual.coin_flip
   };
 });
 
@@ -31,9 +33,11 @@ casual.define("post", function (userId) {
   return {
     id: postId,
     userId,
-    description: casual.text,
-    image: "https://picsum.photos/650/400?random=" + postId,
-    likes: []
+    description: casual.coin_flip ? casual.text : "",
+    image: "https://api.lorem.space/image?dummyId=" + postId,
+    likes: [],
+    date: casual.date(),
+    comments: []
   };
 });
 
@@ -66,6 +70,14 @@ for (let postIdx = 0; postIdx < users.length; postIdx++) {
   const post = posts[postIdx];
   post.likes = random_elements(userIds, casual.integer(0, users.length)).filter(
     (userId) => userId !== post.userId
+  );
+  post.comments = random_elements(userIds, casual.integer(0, users.length)).map(
+    (userId) => {
+      return {
+        userId,
+        comment: casual.short_description
+      };
+    }
   );
 }
 

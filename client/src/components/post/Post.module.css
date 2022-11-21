@@ -36,13 +36,13 @@
 }
 
 .post_text{
-    display: inline-block;
     margin-bottom: 20px;
 }
 
 .post_img{
     max-height: 500px;
     object-fit: contain;
+    width: 100%;
 }
 
 .bottom{
