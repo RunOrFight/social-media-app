@@ -16,3 +16,15 @@
 ::-webkit-scrollbar-thumb{
     background-color: rgb(180, 180, 180);
 }
+
+.main{
+    display: flex;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    gap: 20px
+}
+
+.page_content{
+    flex: 9;
+}

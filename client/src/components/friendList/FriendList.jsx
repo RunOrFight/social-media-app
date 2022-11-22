@@ -1,20 +1,15 @@
 import cls from "./FriendList.module.css";
-import users from "../../data/users.json";
-import { useMemo } from "react";
 import User from "../user/User";
 
-const FriendList = ({ filter }) => {
-  const _users = useMemo(() => {
-    return users.filter((user) => (filter ? user[filter] === true : true));
-  }, [filter]);
-
+const FriendList = ({ usersToDisplay = [], type = "list" }) => {
   return (
     <div className={cls.container}>
-      <ul className={cls.list}>
-        {_users.map((user) => {
+      <ul className={type === "tile" ? cls.tiles : cls.list}>
+        {usersToDisplay.map((user) => {
+          const { username, ...rest } = user;
           return (
             <User
-              user={user}
+              user={type === "tile" ? rest : user}
               style={{ marginBottom: "15px" }}
               key={user.id}
             />

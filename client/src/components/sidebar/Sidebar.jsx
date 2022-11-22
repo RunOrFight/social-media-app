@@ -12,6 +12,7 @@ import {
   SchoolSharp
 } from "@mui/icons-material";
 import FriendList from "../friendList/FriendList";
+import users from "../../data/users.json";
 
 const Sidebar = () => {
   return (
@@ -56,7 +57,7 @@ const Sidebar = () => {
       </ul>
       <button className={cls.button}>Show More</button>
       <hr className={cls.separator} />
-      <FriendList />
+      <FriendList usersToDisplay={users} />
     </div>
   );
 };

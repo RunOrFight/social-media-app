@@ -6,18 +6,18 @@ import {
   EmojiEmotionsSharp
 } from "@mui/icons-material";
 
-const Share = () => {
+const Share = ({ user }) => {
   return (
     <div className={cls.container}>
       <div className={cls.wrapper}>
         <div className={cls.top}>
           <img
             className={`${cls.avatar} avatar`}
-            src='/assets/users/sasha.jpeg'
+            src={user.profilePicture}
             alt='Profile'
           />
           <input
-            placeholder='What is your mind, Sasha?'
+            placeholder={`What is your mind, ${user.username}`}
             type='text'
           />
         </div>

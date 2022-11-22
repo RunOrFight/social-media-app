@@ -1,21 +1,7 @@
-.friend{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+.tiles {
+   display: flex;
+   flex-wrap: wrap;
 }
 
-.avatar{
-    margin-right: 10px;
-    position: relative;
-}
 
-.online{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: limegreen;
-    position: absolute;
-    top: -2px;
-    right: 0px;
-    border: 2px solid white;
-}
+

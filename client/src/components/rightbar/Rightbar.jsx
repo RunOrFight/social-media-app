@@ -1,6 +1,7 @@
 import cls from "./Rightbar.module.css";
 import { CakeSharp } from "@mui/icons-material";
 import FriendList from "../friendList/FriendList";
+import users from "../../data/users.json";
 
 const Rightbar = () => {
   return (
@@ -17,7 +18,7 @@ const Rightbar = () => {
         className={cls.ad}
       />
       <h4 className={cls.title}>Online Friends</h4>
-      <FriendList filter='online' />
+      <FriendList usersToDisplay={users.filter((user) => user.online)} />
     </div>
   );
 };
