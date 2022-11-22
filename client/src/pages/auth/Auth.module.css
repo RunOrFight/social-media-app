@@ -1,0 +1,31 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: #f0f2f5;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.left{
+    flex: 1;
+}
+
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    color: #1877f2;
+    margin-bottom: 10px;
+}
+
+.description{
+    font-size: 24px;
+}
+

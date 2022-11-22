@@ -1,0 +1,64 @@
+.container{
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%)
+}
+
+form.auth{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+form.auth input{
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #dddfe2;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+form.auth input:focus{
+    border: 1px solid #1b74e4;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: #1b74e4;
+}
+
+form.auth button{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0 16px;
+}
+
+form.auth button:hover{
+    background-color: #166fe5;
+}
+
+form.auth button.register{
+    background-color: #42b72a;
+    align-self: center;
+}
+
+form.auth button.register:hover{
+    background-color: #36a420;
+    border-color: #36a420;
+}
+
+.forgot_pas{
+    text-align: center;
+    color: #1877f2;
+    cursor: pointer;
+}
+
+.forgot_pas:hover{
+    text-decoration: underline;
+}
