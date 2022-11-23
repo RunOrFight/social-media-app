@@ -6,11 +6,11 @@ import { useMemo } from "react";
 
 const Feed = ({ user }) => {
   const _posts = useMemo(() => {
-    return posts.filter((post) => (user.id ? post.userId === user.id : true));
-  }, [user.id]);
+    return posts.filter((post) => (user?.id ? post.userId === user.id : true));
+  }, [user?.id]);
   return (
     <div className={cls.container}>
-      <Share user={user} />
+      {user && <Share user={user} />}
       {_posts.map((post) => {
         return (
           <Post

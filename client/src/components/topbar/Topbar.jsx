@@ -5,13 +5,19 @@ import {
   ChatSharp,
   NotificationsSharp
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 const Topbar = () => {
   return (
     <div className={cls.container}>
       <div className={cls.left}>
-        <div className={cls.logo}>My Social</div>
+        <Link to='/'>
+          <span className={cls.logo}>My Social</span>
+        </Link>
         <div className={cls.links}>
-          <span className={cls.link}>Homepage</span>
+          <Link to='/'>
+            <span className={cls.link}>Homepage</span>
+          </Link>
+
           <span className={cls.link}>Timeline</span>
         </div>
       </div>

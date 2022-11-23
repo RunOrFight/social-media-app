@@ -44,6 +44,12 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
   display: block;

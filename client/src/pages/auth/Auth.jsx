@@ -2,8 +2,8 @@ import { useState } from "react";
 import AuthForm from "../../components/authForm/AuthForm";
 import cls from "./Auth.module.css";
 
-const Auth = () => {
-  const [type, setType] = useState("login");
+const Auth = ({ type: pageType }) => {
+  const [type, setType] = useState(pageType);
   return (
     <div className={cls.container}>
       <div className={cls.wrapper}>
