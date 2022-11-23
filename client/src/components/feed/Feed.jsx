@@ -1,21 +1,30 @@
 import cls from "./Feed.module.css";
 import Share from "../share/Share";
 import Post from "../post/Post";
-import posts from "../../data/posts.json";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Feed = ({ user }) => {
-  const _posts = useMemo(() => {
-    return posts.filter((post) => (user?.id ? post.userId === user.id : true));
-  }, [user?.id]);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const responce = await axios.get(
+        "posts/timeline/6374db6e14566375b5867ee9"
+      );
+      setPosts(responce.data);
+    };
+    fetchPosts();
+  }, []);
+
   return (
     <div className={cls.container}>
       {user && <Share user={user} />}
-      {_posts.map((post) => {
+      {posts.map((post) => {
         return (
           <Post
             post={post}
-            key={post.id}
+            key={post._id}
           />
         );
       })}

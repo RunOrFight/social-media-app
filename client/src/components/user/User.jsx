@@ -8,7 +8,10 @@ const User = ({ user, style }) => {
       <div className={cls.avatar}>
         <img
           className='avatar'
-          src={user.profilePicture}
+          src={
+            user.profilePicture ||
+            "https://api.lorem.space/image/face?dummyId=" + user._id
+          }
           alt='Friend'
         />
         {user.online && <span className={cls.online}></span>}
